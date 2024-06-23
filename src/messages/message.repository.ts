@@ -1,6 +1,9 @@
+import { Injectable } from '@nestjs/common';
+
 import { readFile, writeFile } from 'fs/promises';
 import * as path from 'path';
 
+@Injectable()
 export class MessageRepository {
   private messagesFilePath = path.join(__dirname, '..', '..', 'messages.json');
 
